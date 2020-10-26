@@ -37,14 +37,14 @@ In this workshop, you're going to create a drum pad/beatmaker that plays sounds 
 
   
 
-Head over to on repl.it(https://repl.it/) will get started by creating an HTML/CSS & JavaScript project . Once the project is set up, navigate to your `index.html` file and we can start working on the pad layout. 
+Head over to on repl.it(https://repl.it/) will get started by creating an HTML/CSS & JavaScript project . Once the project is set up, navigate to your `index.html` file, and we can start working on the pad layout. 
   
 
 ## Creating the pad layout
 
   
 
-We are going to start writing HTML code; going into our `<body>` tag, which is where we write code that will be shown to the client, create a header with the `<h1>` tag, and then we will have 3 rows, and 4 columns of pads and each pad will be a `<div>,` you can think of the `<div>` tag as a box or container.
+We are going to start writing HTML code; going into our `<body>` tag, which is where we write code that will be shown to the client, create a header with the `<h1>` tag, and then we will have three rows, and four columns of pads and each pad will be a `<div>,` you can think of the `<div>` tag as a box or container.
 
   
 
@@ -96,7 +96,7 @@ We are going to start writing HTML code; going into our `<body>` tag, which is w
 
 And if we run our code, it should look like this.
 
-Not so compelling, right? We will now write some CSS, which will style our HTML document and make our Beat Maker look prettier, let's do that.
+Not so compelling, right? We will now write some CSS, which will style our HTML document and make our Beat Maker look prettier. Let's do that.
 
   
 
@@ -116,7 +116,7 @@ Your CSS file should now be linked, and we can start writing our CSS code.
 
   
 
-We're going to start by writing code for our document to change the colors, adding fonts, height, width, etc. We are also going to be using the font Roboto (https://fonts.google.com/specimen/Roboto?query=roboto), so to do that at the top of our CSS file, we will import it using the line `@import 'https://fonts.googleapis.com/css?family=Roboto';`
+We will start by writing code for our document to change the colors, adding fonts, height, width, and more. We are also going to be using the font Roboto (https://fonts.google.com/specimen/Roboto?query=roboto), so to do that at the top of our CSS file, we will import it using the line `@import 'https://fonts.googleapis.com/css?family=Roboto';`
 
   
 
@@ -134,17 +134,17 @@ height: 100%; // The height CSS property specifies the height of an element.
 
 width: 100%; // The width CSS property specifies the width of an element.
 
-display: flex; // The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex.
+display: flex; // The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid, or flex.
 
 flex-direction: column; // The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
 
-justify-content: center; // The CSS justify-content  property defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container.
+justify-content: center; // The CSS justify-content property defines how the browser distributes space between and around content items along the main axis of a flex container and the inline axis of a grid container.
 
-align-items: center; // The CSS align-items  property sets the align-self value on all direct children as a group. In Flexbox, it controls the alignment of items on the Cross Axis.
+align-items: center; // The CSS align-items property sets the align-self value on all direct children as a group. In Flexbox, it controls the alignment of items on the Cross Axis.
 
-overflow: hidden; // The CSS overflow  property controls what happens to content that is too big to fit into an area.
+overflow: hidden; // The CSS overflow property controls what happens to content that is too big to fit into an area.
 
-font-family: 'Roboto', sans-serif; // The CSS font  family  property is used to specify a list of prioritized fonts and generic family names
+font-family: 'Roboto', sans-serif; // The CSS font-family  property is used to specify a list of prioritized fonts and generic family names
 
 }
 
@@ -160,7 +160,7 @@ The major thing you will notice when we run our code this time is that our conte
 
   
 
-We want to style the header to give it spaces and then create 3 rows and 4 columns to perfectly align the pads and give them a box or container look. We will do just that.
+We want to style the header to give it spaces and then create three rows and four columns to correctly align the pads and give them a box or container look. We will do just that.
 
   
 
@@ -168,7 +168,7 @@ We want to style the header to give it spaces and then create 3 rows and 4 colum
 
 h1 {
 
-color: #000; // The color CSS property sets the foreground color value of an element's text and text decorations, and sets the currentcolor value.
+color: #000; // The color CSS property sets the foreground color value of an element's text and text decorations and sets the current color value.
 
 font-size: 5vw; // The font-size CSS property sets the size of the font.
 
@@ -224,7 +224,7 @@ border: 2px  solid; // Adds a solid 2 pixel border around our box
 
   
 
-If you run your code nothing has changed, that's because we are using classes to group our HTML elements, let's go back to our `index.html` and to our `<div>` we will want add the class name `box` to our nested `div` elements and the parent header will be given the class name `pad`:
+If you run your code, nothing has changed. That's because we are using classes to group our HTML elements. Let's go back to our `index.html` and to our `<div>` we will want to add the class name `box` to our nested `div` elements, and the parent header will be given the class name `pad`:
 
   
 
@@ -311,13 +311,13 @@ We will first start with adding color to our pads through the `style=""` html at
 ```
 What we did above is we gave each nested `div` the `style=""` and assigned a unique background color for each pad.
 
-We are now going to write the code that will give our pads hovering effects, inactive or active states.
+We will write the code that will give our pads hovering effects, inactive or active states.
 
 ```css
 
-// Below we are using pseudo-classes to determine the form of states whether active or hovered.
+// Below, we are using pseudo-classes to determine the form of states, whether active or hovered.
 
-// The :hover CSS pseudo-class matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).
+// The :hover CSS pseudo-class matches when the user interacts with an element with a pointing device but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).
 
 .box:hover {
 
@@ -335,7 +335,7 @@ background-color: darken(#444, 10%); // The darken() function helps us give our 
 
 transform: scale(1.1); // The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model, and the scale() function helps easily give a scale value to our element.
 
-transition: all  0.2s; // CSS transitions allows you to change property values smoothly, over a given duration.
+transition: all  0.2s; // CSS transitions allow you to change property values smoothly over a given duration.
 
 }
 
@@ -362,7 +362,7 @@ We are done with our styling and layout.
 
   
 
-And finally, we are done with our CSS. It now looks good, but when you click on the buttons we have no sound. We need to write our JavaScript code that will get us sound.
+And finally, we are done with our CSS. It now looks good, but when you click on the buttons, we have no sound. We need to write our JavaScript code that will get us sound.
 
 Navigate to the `index.html` file. Then, just before the end of your `<body>` tag, import your `script.js` file that will be used when our document loads:
 
@@ -390,12 +390,12 @@ audio.play();
 }
 
 ```
-What we did above is we basically created a function called `play()` and it receives a parameter with the name `link` which is the link to the sound hosted on AWS (Amazon Web Services), don't worry, you won't need to host your files by yourself. You can use mine. We then create an audio object and we pass the `link` to the object and then what we do is we just load the audio with the `load()` function and we play it with the `play` function.
+What we did above is we created a function called `play()` and it receives a parameter with the name `link`, which is the link to the sound hosted on AWS (Amazon Web Services), don't worry, you won't need to host your files by yourself. You can use mine. We then create an audio object and pass the `link` to the object, and then what we do is we just load the audio with the `load()` function and play it with the `play` function.
 
 
-All we need to do now is add an onclick event to each of our nested `divs` then we call the `play()` function and pass the link to the sound file as our parameter.
+All we need to do now is add an on click event to each of our nested `divs` then we call the `play()` function and pass the link to the sound file as our parameter.
 
-Luckily the code required to playing sound is little all we have to do is navigate to our `index.html` file first and then we add the `onclick=""` html attribute and inside we call the `play(link)` with the link inside like below:
+Luckily the code required to playing sound is little all we have to do is navigate to our `index.html` file first, and then we add the `onclick=""` html attribute, and inside we call the `play(link)` with the link inside like below:
 
   
 ```html
@@ -463,11 +463,11 @@ Now that you have finished building it, you should share your beautiful creation
 
 ## The End
 
-If you haven't created an account on [repl.it](https://repl.it), make sure you do so to save this wonderful creation!
+Suppose you haven't created an account on [repl.it](https://repl.it), make sure you do so to save this wonderful creation!
 
 If you face any difficulties in signing up, [watch this](https://www.youtube.com/watch?v=Mtqp4CUepk0).
 
-Now it is up to you! Do anything with this project, try to implement a way you can play the drum pad with the corresponding keys on your keyboard 
+Now it is up to you! Do anything with this project, try to implement a way to play the drum pad with the corresponding keys on your keyboard. 
 
 Check out these crazy examples!
 To finish, here are some amazing, more customized drum pad machines/beatmakers made by other developers:
@@ -482,4 +482,4 @@ To finish, here are some amazing, more customized drum pad machines/beatmakers m
 
   
 
-We are done with our workshop, go ahead, customize it, and add more things to it and just have fun. I hope you enjoyed this workshop, happy hacking!
+We are done with our workshop. Go ahead, customize it, and add more things to it and just have fun. I hope you enjoyed this workshop, happy hacking!
