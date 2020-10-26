@@ -1,6 +1,6 @@
 ---
 name: 'Drum Pad'
-description: 'Build a drumpad/beat maker in HTML/CSS & jQuery'
+description: 'Build a drumpad/beat maker in HTML/CSS & JS'
 author: '@emmanuel39hanks'
 ---
 
@@ -16,11 +16,11 @@ In this workshop, you're going to create a drum pad/beatmaker that plays sounds 
 
 ## Getting started
 
-We will be using HTML, CSS & jQuery(a JavaScript library used to change elements on a webpage https://jquery.com/).
+We will be using HTML, CSS & JavaScript.
 
 We will get started by creating an HTML/CSS & JavaScript project on repl.it (https://repl.it/). Once your project is  set up, navigate to your `index.html` file. Then, inside of our `<head>` tag, import jQuery:
 
-`<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>`
+`<script src="https://cdnjs.cloudflare.com/ajax/libs/Vanilla JavaScript/3.1.0/Vanilla JavaScrip.min.js"></script>`
 
 Great! Now that we've imported jQuery, we're ready to start writing our code.
 
