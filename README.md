@@ -2,49 +2,42 @@
 name: 'Drum Pad'
 description: 'Creating a Drum Pad with HTML, CSS & JS'
 author: '@emmanuel39hanks'
-img: 'https://cloud-ms6ubs6qu.vercel.app/0screencapture-drum-emmanuel39hanks-repl-co-2020-11-07-23_20_37.png'
+img: 'https://cloud-edj42rbl8.vercel.app/0screencapture-drum-emmanuel39hanks-repl-co-2020-11-07-23_43_18.png'
 ---
 
-Ever wondered how you can play sounds with code? Well, if yes, then you will love this workshop! We will be creating a drum pad in less than 230 lines of code that plays actual sounds, and if you are a beginner, this won't only be fun and creative but will help you get comfortable with coding!
+Ever wondered how you can play sounds with code? Well, if yes, then you will love this workshop! We will be creating a drum pad with less than 230 lines of code that plays actual sounds.
 
-<p align='center'>
-<img src="https://media.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy.gif" alt="ready-to-code" >
-</p>
-
-
+![Am ready GIF](https://media.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy.gif)
 # Overview
 
 _Preview of the Drum Pad we are going to be creating_
 
-![Drum Pad Preview](https://cloud-ms6ubs6qu.vercel.app/0screencapture-drum-emmanuel39hanks-repl-co-2020-11-07-23_20_37.png)
+![Drum Pad Preview](https://cloud-edj42rbl8.vercel.app/0screencapture-drum-emmanuel39hanks-repl-co-2020-11-07-23_43_18.png)
 
-Apart from building the drum pad, you will also be learning about different types of events, functions, styling, and more with Vanilla JavaScript, HTML, and CSS. This whole workshop is customizable according to you, and the best part is, it will take less than 20 minutes to complete! 
+Apart from building the drum pad, you will also be learning about different types of events, functions, styling, and more with Vanilla JavaScript, HTML, and CSS.
 
-Final Code: [GitHub](https://github.com/emmanuel39hanks/beat_maker)
-
-Demo: [Live](https://drum.emmanuel39hanks.repl.co)
+Final Code: [GitHub](https://github.com/emmanuel39hanks/beat_maker) | Demo: [Live](https://drum.emmanuel39hanks.repl.co)
 
 ## Getting started
 
-Let's start by setting up our coding environment on [repl.it](https://repl.it/), a free, online code editor.
-To start your coding right away, navigate to [repl.it](https://repl.it/languages/html), and you will have your whole setup ready when you sign up.
+Let's start by setting up our coding environment using [repl.it](https://repl.it/), a free, online code editor.
+To begin, navigate to [repl.it](https://repl.it/languages/html), and create a new repl.
 
-You will see that there are already three files named index.html, style.css, and script.js. Navigate to your `index.html` file, and we can start working on the structure of our drum pads in our HTML file. 
+You will see that there are already three files: index.html, style.css, and script.js. Navigate to your `index.html` file, and we will work on the structure of our drum pad there. 
 
 ## HTML:
 
-Inside the `<body>` tag is where we will write most of our HTML code, we will start by creating a header that displays the text `DRUM PAD`, and we will do that with the `<h1>` tag:
+We will write most of our HTML code inside the `<body>` tag. Let's start by creating a header that displays the text `DRUM PAD` using the `<h1>` tag:
 
 ```html
 <h1>DRUM PAD</h1>
 ```
 
-Just under the `<h1>` tag, we will have three rows and four columns of pads. Each pad will be created with the `<div>` tag. You can think of the `<div>` tag as a box or container, and we are using it because each of our pads will have a boxy look.
+Just under the `<h1>` tag, we will have three rows and four columns of buttons. Each buttons will be created with the `<div>` tag. You can think of the `<div>` tag as a box or container, and we are using it because each of our buttons will have a boxy look.
 
 ```html
 <!-- Parent div -->
 <div>
-
 <!-- nested child divs -->
   <div>A</div>
   <div>B</div>
@@ -61,10 +54,11 @@ Just under the `<h1>` tag, we will have three rows and four columns of pads. Eac
 </div>
 ```
 
-To quickly break this down. We have a parent `<div>` tag that nests our pad  `divs`, and inside our pad `divs` we put letters to easily identify each pad and like I mentioned above, each pad will be given a box look, and that's why we are using `div` tags.
+To quickly break this down. We have a parent `<div>` tag that nests our button `divs`, and we label our buttons with letters to easily identify them, and like I mentioned above, each button will be given a boxy look, and that's why we are using `div` tags.
 
-<details>
+<details>  
 <summary>Here's what your entire index.html file should look like so far:</summary>
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -94,23 +88,13 @@ To quickly break this down. We have a parent `<div>` tag that nests our pad  `di
 ```
 </details>
 
-And if we run our code, it should look like this:
+When we run our code, it will look like this at the moment:
 
 ![Preview of HTML with no CSS](https://cloud-hqtl5tea3.vercel.app/0screencapture-drumpad-emmanuel39hanks-repl-co-2020-11-03-08_36_46.png)
 
 # CSS:
 
-We will write CSS to add styling, which will make our drum pad look appealing Let's do that!
-
-Just before the end of your `<head>` tag, link your CSS file:
-
-```html
-<link rel="stylesheet" href="style.css"/>
-```
-
-Your CSS file should be linked, and we can begin writing our CSS code.
-
-We will be writing code to change the colors, adding fonts, height, width, and more.
+We will style our drum pad with CSS, which will make our drum pad look visually appealing.
 
 Navigate to your `style.css` file and add the following code:
 
@@ -120,17 +104,16 @@ body {
   height: 100%;
   width: 100%;
   
-  /* The flex CSS shorthand property sets how a flex item will grow or shrink to fit the space available in its flex container */
+  /* To learn more about the CSS flex box, check out the hacking section */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  /* The CSS overflow property controls what happens to content that is too big to fit into an area. This text is really long, and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. */
-  /* And we hide all content that overflows. */
+  /* To learn more about the overflow property, check out the hacking section */
   overflow: hidden;
 
-  /* Here, we set the font of our web page to 'sans-serif' */
+  /* To learn more about the font-family property, check out the hacking section */
   font-family: sans-serif;
 }
 ```
@@ -139,147 +122,118 @@ When we run our code, you will notice that our content has been aligned to the c
 
 ![Preview of HTML with CSS applied, to change the layout](https://cloud-bp7m8g6di.vercel.app/0screencapture-drumpad-emmanuel39hanks-repl-co-2020-11-03-08_35_57.png)
 
-We want to style the header's font size, color, and letter spacing.
+We're going to be use classes to add styling to our `div` tags, and to use classes we have the HTML attribute `class=""`.
+
+Let's navigate back to our `index.html`, our parent `<div>` tag will be given the class name `pad` and our nested `<div>` tags, the class name `box` which will apply our classes styling to our HTML tags.
+
+```html
+<!-- Here we give the parent div the class name pad -->
+<div  class="pad">
+<!-- Here we give the nested divs each the class name box that will add styling of each individual pad -->
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+  <div class="box">D</div>
+  <div class="box">E</div
+  <div class="box">F</div>
+  <div class="box">G</div>
+  <div class="box">H</div>
+  <div class="box">I</div>
+  <div class="box">J</div>
+  <div class="box">K</div>
+  <div class="box">L</div>
+</div>
+```
+
+Now navigate your `style.css`, and we will change the header's font size, color, and letter spacing using the following code:
 
 ```css
 h1 {
   color: #000;
 
-  /* This unit is based on the width of the user's visible area of a web page. A value of 1vw is equal to 1% of the visible area of a web page width. */
+  /* To learn more about the font-size property, check out the hacking section */
   font-size: 5vw;
 
-  /* Letter spacing just adds space horizontally between text characters. */
+  /* To learn more about the letter-spacing property, check out the hacking section */
   letter-spacing: 6px; 
 }
 ```
 
-Then create three rows and four columns to correctly align the pads and give them a box or container look.
+Then create three rows and four columns to correctly align the buttons and give them a box or container look.
 
 ```css
 .pad {
   width: 500px;
   display: flex;
 
-  /* The justify-content property aligns flex items along the main axis of the current line of the flex container. It defines how space is distributed between and around flex items. */
+  /* To learn more about the justify-content property, check out the hacking section */
   justify-content: space-between;
   
-  /* The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked, and in this case, we tell them to wrap. */
-  /* And a flex item is a flex container that expands items to fill available free space or shrinks them to prevent overflow. */
+  /* To learn more about the flex-wrap property, check out the hacking section */
   flex-wrap: wrap;
 }
 ```
 
-We will change each of our pad's properties, and we will do that with the class name `.box`, to give them unique styling.
+We will change each of our button's properties, with the class name `.box`, to give them unique styling.
 
 ```css
-
 .box {
   width: 100px;
   height: 100px;
   margin: 10px  0;
 
-  /* The box-shadow property is used to cast one or more drop shadows to an element. Each shadow is defined by one to five components: a horizontal offset value, a vertical offset value, an optional blur radius, an optional spread radius, and an optional color. */
+  /* To learn more about the box-shadow property, check out the hacking section */
   box-shadow: 0  8px  6px  -6px  black;
   background-color: #444;
   display: flex;
 
-  /* Here, like above, we justify our content and this time to the center. */
   justify-content: center;
 
-  /* The align-items property sets the align-self value on all direct children as a group */
+  /* To learn more about the align-items property, check out the hacking section */
   align-items: center;
   font-size: 20px;
 
-  /* We are changing the color of our individual pad, and in this case, instead of using hex values or a normal color name, we use rgb() */
-  /* The rgb() function define colors using the Red-green-blue (RGB) model. An RGB color value is specified with rgb(red, green, blue). Each parameter defines the intensity of that color and can be an integer between 0 and 255 or a percentage value (from 0% to 100%). */
+  /* To learn more about the rgba function, check out the hacking section */
   color: rgba(255, 255, 255, 0.4);
 
-  /* user-select property specifies whether the text of an element can be selected. In web browsers, if you double-click on some text, it will be selected/highlighted. This property can be used to prevent this. */
-  user-select: none;
-
-  /* The border property sets the border around an HTML element, meaning all four borders (top, right, bottom, and left). */
-  /* Here, we are giving our individual pads a 4px solid border. */
+  /* To learn more about the border-radius property, check out the hacking section */
   border: 4px solid;
-  /* We are changing the values of our individual pads in the pad area that holds all our pads. */
 }
-```
-
-If you run your code, nothing has changed. That's because we are using classes. We will solve this by using the HTML attribute `class=""` to add classes to our `div` tags.
-
-Let's navigate back to our `index.html`, our parent `<div>` will be given the class name `pad` and our nested `<div>` tags, the class name `box` which will apply the code that we wrote in our CSS file.
-
-```html
-<!-- Here we give the parent div the class name pad -->
-<div  class="pad">
-
-<!-- Here we give the nested divs each the class name box that will add styling of each individual pad -->
-  <div  class="box">A</div>
-  <div  class="box">B</div>
-  <div  class="box">C</div>
-  <div  class="box">D</div>
-  <div  class="box">E</div
-  <div  class="box">F</div>
-  <div  class="box">G</div>
-  <div  class="box">H</div>
-  <div  class="box">I</div>
-  <div  class="box">J</div>
-  <div  class="box">K</div>
-  <div  class="box">L</div>
-</div>
 ```
 
 And when we rerun our code, it should look like this:
 
-![Preview of HTML with layout CSS applied, the pads are in a grid but all gray](https://cloud-edj42rbl8.vercel.app/0screencapture-drum-emmanuel39hanks-repl-co-2020-11-07-23_43_18.png)
+![Preview of HTML with layout CSS applied, the pads are in a grid and all gray borders](https://cloud-edj42rbl8.vercel.app/0screencapture-drum-emmanuel39hanks-repl-co-2020-11-07-23_43_18.png)
 
-We will go where we wrote styling for our `.box` class, and we will add styling that will give our pads a rounded border with a pinkish color.
-
-```css
-.box {
-  /* We will add these two properties to the .box class to add a colored rounded, solid border. */
-  border: 4px solid #E5446D;
-
-  /* This property allows you to add rounded corners to elements! */
-  border-radius: 15px;
-}
-```
-
-We will then add code that adds hovering effects, inactive or active states to our pads.
+We will then add code that adds hovering effects, inactive or active states to our buttons:
 
 ```css
-/* The :hover pseudo-class in CSS selects elements when the mouse cursor is over them. */
-/* Here, we will add the :hover pseudo-class on the .box class styling to make the pad lighter when the cursor hovers on it. */
+/* To learn more about the lighten function and :hover pseudo class, check out the hacking section */
 .box:hover {
   background-color: lighten(#444, 10%);
 
-  /* Changing the cursor to a pointer when we hover on the pads. */
+  /* To learn more about the cursor property, check out the hacking section */
   cursor: pointer;
 }
 
-/* :active is a CSS pseudo-class that specifies and selects an element based on a state—the active state—and is used to apply styles to an element when it matches that state. The :active pseudo-class is a dynamic class that applies when an element is activated by the user. */
-/* And we will use the :active pseudo-class on the .box class and add styling for when the pads are in an active state. */
-
+/* To learn more about the :active pseudo class, check out the hacking section */
 .box:active {
-  /* When the pad is clicked, we darken the pad with a gray-ish represented by the hex value #444, darken 10% */
+  /* To learn more about the darken function, check out the hacking section */
   background-color: darken(#444, 10%);
 
-  /* transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model. */
-  /* Here, we just make it 10% larger when clicked with the scale() function. */
+  /* To learn more about the transform property, check out the hacking section */
   transform: scale(1.1);
 
-  /*CSS transitions provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. */
-  /* We give a transition that lasts a period of 0.2 seconds, and we use a value of “all” to refer to transition properties. */
+  /* To learn more about the transition property, check out the hacking section */
   transition: all  0.2s;
 }
 ```
 
-Now that we have finished our styling, here's what your drum pad should look like:
-
-![Preview of HTML with finished layout CSS applied, and our pad borders colored](https://cloud-ms6ubs6qu.vercel.app/0screencapture-drum-emmanuel39hanks-repl-co-2020-11-07-23_20_37.png)
+Now that we have finished our styling, let's now work our drum pad functionality.
 
 ## JavaScript:
 
-When you click on the buttons, we have no sound. We need to write our JavaScript code that will get us sound.
+When you click on the buttons, we have no sound. We need to write some JavaScript code that will play sounds.
 
 Let's navigate to our the `index.html` file to link the JavaScript file. Then, inside the `<body>` tag at the bottom, we will link our `script.js` file with the following code:
 
@@ -297,57 +251,63 @@ function play(link) {
 }
 ```
 
-To explain what we did above, we created a function called `play()`, it receives a parameter, which is `link`. This is the link to the sound. We then create an audio object and pass `link` to the object. Now we can just load the audio with the `load()` function and play it with the `play()` function. A function is a block of code designed to perform a particular task, it is executed when "something" invokes it (calls it).
+Here we created a function called `play()`, it receives a parameter, which is `link`. This is the link to the sound. We then create an audio object and pass `link` to the object. Now we can just load the audio with the `load()` function and play it with the `play()` function. A function is a block of code designed to perform a particular task, it is executed when "something" invokes it (calls it).
 
-All we need to do now is add an on click event to each of our nested `divs`, that gets triggered when a pad is clicked, then we call the `play()` function and pass the link to the sound file as our parameter.
+All we need to do now is find a way to play sound when a button is clicked.
 
-Let's navigate to our `index.html` file first, so we want the sound to play when each pad is click, we will need a way to call our `play()`. We will use an HTML attribute called `onclick=""`, learn more about the onclick event here: [onclick events](https://www.w3schools.com/jsref/event_onclick.asp), it helps us call a function when an element with the attribute is clicked on, and inside the quotation marks, we pass the `play()` function and  also pass a link as the parameter to the function. And when a pad is clicked, it will get triggered and call the `play()` function and play the sound from the link we passed:
+Navigate to your `index.html` file, we want the sound to play when each button is click, we will need a way to call our `play()` function. We will use an HTML attribute called `onclick=""`, learn more about the onclick event here: [onclick events](https://www.w3schools.com/jsref/event_onclick.asp), it helps us call a function when a tag with the attribute is clicked on, and inside the quotation marks, we pass the `play()` function and pass a link as the parameter to the function. And when a pad is clicked, it will get triggered and call the `play()` function and play the sound from that link:
 
 ```html
-<div  class="pad">
-  <div  class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0025.mp3')">A</div>
-
-  <div  class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0010.mp3')">B</div>
-
-  <div  class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0000.mp3')">C</div>
-
-  <div  class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/RS.mp3')">D</div>
-
-  <div  class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/OH25.mp3')">E</div>
-
-  <div  class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/MA.mp3')">F</div>
-
-  <div  class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CY0010.mp3')">G</div>
-
-  <div  class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CH.mp3')">H</div>
-
-  <div  class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CB.mp3')">I</div>
-
-  <div  class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/BD0010.mp3')">J</div>
-
-  <div  class="box"  onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/BD0000.mp3')">K</div>
-
-  <div  class="box"  onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CP.mp3')">L</div>
+<div class="pad">
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0025.mp3')">A</div>
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0010.mp3')">B</div>
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/SD0000.mp3')">C</div>
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/RS.mp3')">D</div>
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/OH25.mp3')">E</div>
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/MA.mp3')">F</div>
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CY0010.mp3')">G</div>
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CH.mp3')">H</div>
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CB.mp3')">I</div>
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/BD0010.mp3')">J</div>
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/BD0000.mp3')">K</div>
+  <div class="box" onclick="play('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/CP.mp3')">L</div>
 </div>
 ```
 
 If you run your code now, you should see a working drum pad!
 
-![Image](https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif)
+![We did it GIF](https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif)
 
 ## Hacking
 
-Now that you have finished building, you share your beautiful creation with other people! Remember, it's as easy as giving them your URL! Don't forget to share it with me on Slack @emmanuel39hanks.
+Now that you have finished building, you can share your beautiful creation with other people! Remember, it's as easy as giving them your URL! Don't forget to share it with me on Slack @emmanuel39hanks.
 
-Resources:
+**Resources:**
 
-- Audio Object (https://www.w3schools.com/JSREF/dom_obj_audio.asp)
-- Onclick event (https://www.w3schools.com/jsref/event_onclick.asp)
-- Explanation on the Flex Direction CSS property (https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
+- [JavaScript Audio Object](https://www.w3schools.com/JSREF/dom_obj_audio.asp)
+- [JavaScript onclick event](https://www.w3schools.com/jsref/event_onclick.asp)
+- [CSS flex-direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
+- [CSS flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
+- [CSS justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+- [CSS Flex box](https://www.w3schools.com/css/css3_flexbox.asp)
+- [CSS overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
+- [CSS font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+- [CSS letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+- [CSS transition](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+- [CSS :hover pseudo class](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover)
+- [CSS :hover pseudo class](https://developer.mozilla.org/en-US/docs/Web/CSS/:active)
+- [CSS cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
+- [CSS lighten & darken function](https://css-tricks.com/snippets/javascript/lighten-darken-color/)
+- [CSS border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
+- [CSS rgba function](https://www.w3schools.com/cssref/func_rgba.asp)
+- [CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+- [CSS align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+- [CSS font-family](https://www.w3schools.com/css/css_font.asp)
 
-Now it's up to you! Do anything with this project, try implement something crazy. 
+Now it's up to you! Do anything with this project, go on and implement something crazy. 
 
-To finish, here are some branches that build upon this project:
+To finish, here are some examples of what can be built on top of this project:
 
 - **Play an automated beat track:** [demo and code](https://repl.it/@emmanuel39hanks/drumpadwithabeattrack)
 - **Play the drum pad with your keyboard:** [demo and code](https://repl.it/@emmanuel39hanks/drumpadwithkeyboard)
